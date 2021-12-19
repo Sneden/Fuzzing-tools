@@ -1,0 +1,57 @@
+==============================
+   jq 1.5: ./test-suite.log
+==============================
+
+# TOTAL: 4
+# PASS:  3
+# SKIP:  0
+# XFAIL: 0
+# FAIL:  1
+# XPASS: 0
+# ERROR: 0
+
+.. contents:: :depth: 2
+
+FAIL: tests/onigtest
+====================
+
+Testing '[match("( )*"; "g")]' at line number 2
+*** Insufficient results for test at line number 4: [match("( )*"; "g")]
+Testing '[match("( )*"; "gn")]' at line number 6
+*** Insufficient results for test at line number 8: [match("( )*"; "gn")]
+Testing '[match("a"; "gi")]' at line number 10
+*** Insufficient results for test at line number 12: [match("a"; "gi")]
+Testing '[match(["(bar)"])]' at line number 14
+*** Insufficient results for test at line number 16: [match(["(bar)"])]
+Testing '[match("bar")]' at line number 19
+*** Insufficient results for test at line number 21: [match("bar")]
+Testing '[match("bār")]' at line number 24
+*** Insufficient results for test at line number 26: [match("bār")]
+Testing '[match(".+?\\b")]' at line number 28
+*** Insufficient results for test at line number 30: [match(".+?\\b")]
+Testing '[match(["foo (?<bar123>bar)? foo", "ig"])]' at line number 32
+*** Insufficient results for test at line number 34: [match(["foo (?<bar123>bar)? foo", "ig"])]
+Testing '[test("( )*"; "gn")]' at line number 37
+*** Insufficient results for test at line number 39: [test("( )*"; "gn")]
+Testing '[test("ā")]' at line number 41
+*** Insufficient results for test at line number 43: [test("ā")]
+Testing 'capture("(?<a>[a-z]+)-(?<n>[0-9]+)")' at line number 45
+*** Insufficient results for test at line number 47: capture("(?<a>[a-z]+)-(?<n>[0-9]+)")
+Testing '[.[] | sub(", "; ":")]' at line number 54
+*** Insufficient results for test at line number 56: [.[] | sub(", "; ":")]
+Testing 'sub("^(?<head>.)"; "Head=\(.head) Tail=")' at line number 58
+*** Insufficient results for test at line number 60: sub("^(?<head>.)"; "Head=\(.head) Tail=")
+Testing '[.[] | gsub(", "; ":")]' at line number 62
+*** Insufficient results for test at line number 64: [.[] | gsub(", "; ":")]
+Testing 'gsub("(?<d>\\d)"; ":\(.d);")' at line number 66
+*** Insufficient results for test at line number 68: gsub("(?<d>\\d)"; ":\(.d);")
+Testing '[.[] | scan(", ")]' at line number 70
+*** Insufficient results for test at line number 72: [.[] | scan(", ")]
+Testing '[.[]|[[sub(", *";":")], [gsub(", *";":")], [scan(", *")]]]' at line number 74
+*** Insufficient results for test at line number 76: [.[]|[[sub(", *";":")], [gsub(", *";":")], [scan(", *")]]]
+Testing '[.[]|[[sub(", +";":")], [gsub(", +";":")], [scan(", +")]]]' at line number 78
+*** Insufficient results for test at line number 80: [.[]|[[sub(", +";":")], [gsub(", +";":")], [scan(", +")]]]
+Testing 'gsub("(?<x>.)[^a]*"; "+\(.x)-")' at line number 83
+*** Insufficient results for test at line number 85: gsub("(?<x>.)[^a]*"; "+\(.x)-")
+0 of 19 tests passed (0 malformed)
+
