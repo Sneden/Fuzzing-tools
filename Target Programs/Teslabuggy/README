@@ -1,0 +1,58 @@
+Welcome to the "buggy" challenge!
+Version 0.0.1.
+
+Files included:
+- README      : this file.
+- Makefile    : simple makefile.
+- buggy.c     : single C file for the challenge.
+- buggy       : precompiled buggy binary for Ubuntu 14.04 LTS.
+- buggy_debug : precompiled debug buggy binary for Ubuntu 14.04 LTS.
+
+"buggy" should compile and run on Linux systems, simply by typing "make".
+However, it is recommended that you use an uptodate Ubuntu 14.04 LTS (in a VM
+if required), in order to avoid distribution specific difficulties.
+Precompiled binaries, that should run fine on Ubuntu 14.04, are provided. It is
+preferred that you submit sample inputs that run against this exact binary.
+
+The "buggy" executable is run from the command line where it accepts lines typed
+to stdio, and sometimes writes results back to stdout. For example, using the
+echo command
+(the letter G):
+
+chris@localhost:~/buggy-0.0.1$ ./buggy 
+Ghello!
+Ghello!
+
+The first line launches "buggy", the second was typed by us as input (followed
+by enter) and the third line was echoed back by "buggy" itself. We see that it
+is working.
+
+Your challenge is to identify security weaknesses and bugs in "buggy" and:
+- Document the problems.
+- Where possible, create a sequence of input lines that demonstrate the
+problem.
+- Fix the problems by writing patches.
+
+Tips and tricks:
+- It is recommended that you undertake this challenge on an uptodate Ubuntu
+14.04 LTS.
+- Any bug is of interest, even if it is not a security bug. Document everything
+you find.
+- Any improvement to the quality, legibility or robustness of the code is also
+welcome.
+- Defensive and/or hardening changes to the .c file or Makefile are welcome.
+- Generate an individual patch for each bug fix or improvement.
+- There may be interdependencies between the patches, so make sure to indicate
+the application order necessary for successful patching.
+- If you wish to prove exploitability of a given security bug, providing an
+input sequence that results in the display of "gnome-calculator" is a good
+way to go about it.
+- The bugs in "buggy" include memory corruptions (with multiple different root
+causes), logic errors, authentication bypasses and more.
+- There are input sequences that will go from no access to remote code
+execution; no access to admin; no access to superadmin; and admin to superadmin.
+- There are two password hashes in the binary; it is recommended to you that it is not worth spending time trying to crack the superadmin password.
+- If you find yourself low on time, concentrate on what you consider to be the
+most serious issues.
+
+Above all, have fun!
